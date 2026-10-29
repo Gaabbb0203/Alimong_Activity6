@@ -39,7 +39,7 @@ class _RegisterPageState extends State<RegisterPage> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const LoginPage()),
-    );
+    ); // MaterialPageRoute
   }
 
   InputDecoration _inputDecoration(String label, IconData icon) {
@@ -48,8 +48,8 @@ class _RegisterPageState extends State<RegisterPage> {
       prefixIcon: Icon(icon),
       border: const OutlineInputBorder(
         borderRadius: BorderRadius.all(Radius.circular(12)),
-      ),
-    );
+      ), // OutlineInputBorder
+    ); // InputDecoration
   }
 
   @override
@@ -57,7 +57,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Alimong Activity 6'),
-      ),
+      ), // AppBar
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -66,32 +66,32 @@ class _RegisterPageState extends State<RegisterPage> {
             TextField(
               controller: _fullnameController,
               decoration: _inputDecoration('FullName', Icons.person),
-            ),
+            ), // TextField
             const SizedBox(height: 15),
             TextField(
               controller: _usernameController,
               decoration: _inputDecoration('Username', Icons.account_circle),
-            ),
+            ), // TextField
             const SizedBox(height: 15),
             TextField(
               controller: _passwordController,
               decoration: _inputDecoration('Password', Icons.lock),
-            ),
+            ), // TextField
             const SizedBox(height: 15),
             TextField(
               controller: _confirmPasswordController,
               decoration: _inputDecoration('Confirm Password', Icons.lock_outline),
-            ),
+            ), // TextField
             const SizedBox(height: 15),
             TextField(
               controller: _genderController,
               decoration: _inputDecoration('Gender', Icons.male_rounded),
-            ),
+            ), // TextField
             const SizedBox(height: 15),
             TextField(
               controller: _civilStatusController,
               decoration: _inputDecoration('Civil Status', Icons.people),
-            ),
+            ), // TextField
             const SizedBox(height: 15),
             TextField(
               controller: _birthdateController,
@@ -110,7 +110,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   });
                 }
               },
-            ),
+            ), // TextField
             const SizedBox(height: 25),
             ElevatedButton(
               onPressed: _register,
@@ -119,7 +119,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 minimumSize: const Size.fromHeight(50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
-                ),
+                ), // RoundedRectangleBorder
               ),
               child: const Text(
                 'Register',
@@ -127,12 +127,13 @@ class _RegisterPageState extends State<RegisterPage> {
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+                ), // TextStyle
+              ), // Text
+            ), // ElevatedButton
           ],
-        ),
-      ),
-    );
+        ), // Column
+      ), // Padding
+    ); // Scaffold
   }
 }
+
