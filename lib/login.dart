@@ -21,9 +21,8 @@ class _LoginPageState extends State<LoginPage> {
       builder: (context) => LandingPage(
         username: username,
         password: password,
-      ), // LandingPage
-    ), // MaterialPageRoute
-    );
+      ),
+    ));
   }
 
   void _goToRegister() {
@@ -39,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
       minimumSize: const Size.fromHeight(50),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-      ), // RoundedRectangleBorder
+      ),
       textStyle: const TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.bold,
@@ -49,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Alimong Activity 6'),
-      ), // AppBar
+      ),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20.0),
@@ -63,9 +62,9 @@ class _LoginPageState extends State<LoginPage> {
                   prefixIcon: Icon(Icons.person),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
-                  ), // OutlineInputBorder
-                ), // InputDecoration
-              ), // TextField
+                  ),
+                ),
+              ),
               const SizedBox(height: 15),
               TextField(
                 controller: _passwordController,
@@ -75,17 +74,17 @@ class _LoginPageState extends State<LoginPage> {
                   prefixIcon: Icon(Icons.lock),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
-                  ), // OutlineInputBorder
-                ), // InputDecoration
+                  ),
+                ),
                 obscureText: true,
-              ), // TextField
+              ),
               const SizedBox(height: 30),
               ElevatedButton(onPressed: _login, style: buttonStyle.copyWith(
                 backgroundColor: WidgetStateProperty.all(Colors.blue),
                 foregroundColor: WidgetStateProperty.all(Colors.white),
               ),
                 child: const Text('Login'),
-              ), // ElevatedButton
+              ),
 
               const SizedBox(height: 30),
               ElevatedButton(onPressed: _goToRegister, style: buttonStyle.copyWith(
@@ -94,12 +93,11 @@ class _LoginPageState extends State<LoginPage> {
                 side: WidgetStateProperty.all(const BorderSide(color: Colors.blue, width: 2)),
               ),
                 child: const Text('Register'),
-              ), // ElevatedButton
+              ),
             ],
-          ), // Column
-        ), // SingleChildScrollView
-      ), // Center
-    ); // Scaffold
+          ),
+        ),
+      ),
+    );
   }
 }
-

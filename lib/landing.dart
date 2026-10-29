@@ -11,7 +11,7 @@ class LandingPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Alimong Activity 6"),
-      ), // AppBar
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,13 +22,11 @@ class LandingPage extends StatelessWidget {
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () => Navigator.pop(context),
-              child: Text("Back to Login",
-              ), // Text
-            ), // ElevatedButton
+              child: Text("Back to Login"),
+            ),
           ],
-        ), // Column
-      ), // Center
-    ); // Scaffold
+        ),
+      ),
+    );
   }
 }
-
